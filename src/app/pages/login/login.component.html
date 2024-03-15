@@ -46,19 +46,19 @@
             <h2 class="log-title">Đăng ký tài khoản</h2>
             <form [formGroup]="formData">
               <div class="form-group">
-                <input type="text" required="required" formControlName="username"/>
+                <input type="text" required="required" />
                 <label class="control-label" for="input">Họ và tên</label><i class="mtrl-select"></i>
               </div>
               <div class="form-group">
-                <input type="text" required="required" formControlName="password"/>
+                <input type="text" required="required" formControlName="username"/>
                 <label class="control-label" for="input">Tên đăng nhập</label><i class="mtrl-select"></i>
               </div>
               <div class="form-group">
-                <input type="password" required="required" formControlName="confirmPassword"/>
+                <input type="password" required="required" formControlName="password"/>
                 <label class="control-label" for="input">Mật khẩu</label><i class="mtrl-select"></i>
               </div>
               <div class="form-group">
-                <input type="password" required="required"/>
+                <input type="password" required="required" formControlName="confirmPassword"/>
                 <label class="control-label" for="input">Xác nhận mật khẩu</label><i class="mtrl-select"></i>
               </div>
               <div class="form-radio">
@@ -75,7 +75,7 @@
               </div>
               <div class="form-group">
                 <input type="text" required="required"/>
-                <label class="control-label" for="input"><a href="https://wpkixx.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6c29010d05002c">[email&#160;protected]</a></label><i class="mtrl-select"></i>
+                <label class="control-label" for="input"><a href="https://wpkixx.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6c29010d05002c">Email</a></label><i class="mtrl-select"></i>
               </div>
               <div class="checkbox">
                 <label>

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://42.96.4.134:8080'
+  apiUrl: 'https://cuongbip.top/api'
 };
 
 /*

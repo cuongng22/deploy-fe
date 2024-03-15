@@ -1,0 +1,96 @@
+<div class="theme-layout">
+  <div class="container-fluid pdng0">
+    <div class="row merged">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="land-featurearea">
+          <div class="land-meta">
+            <h1>Fake book cuongbip</h1>
+            <p>
+              Không nghe cave kể chuyện <br>
+              Không nghe nghiện trình bày <br>
+              Tham gia Fake book cuongbip để trải lòng nhiều hơn
+            </p>
+            <div class="friend-logo">
+              <span><img src="/assets/images/wink.png" alt=""></span>
+            </div>
+            <a href="#" title="" class="folow-me">TALENT WITHOUT HARD WORKING IS NOTHING!</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="login-reg-bg">
+          <div class="log-reg-area" *ngIf="isDangKy">
+            <h2 class="log-title">Đăng nhập</h2>
+            <form [formGroup]="formData">
+              <div class="form-group">
+                <input type="text" id="input" required="required" formControlName="username"/>
+                <label class="control-label" for="input">Tên đăng nhập</label><i class="mtrl-select"></i>
+              </div>
+              <div class="form-group">
+                <input type="password" required="required" formControlName="password"/>
+                <label class="control-label" for="input">Mật khẩu</label><i class="mtrl-select"></i>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" checked="checked"/><i class="check-box"></i>Nhớ mật khẩu
+                </label>
+              </div>
+              <a href="#" title="" class="forgot-pwd">Quên mật khẩu?</a>
+            </form>
+              <div class="submit-btns">
+                <button class="mtr-btn signin" type="button" (click)="login()"><span>Đăng nhập</span></button>
+                <button class="mtr-btn signup ml-2" type="button" (click)="showForm(false)"><span>Đăng ký</span></button>
+              </div>
+          </div >
+          <div class="log-reg-area" *ngIf="!isDangKy">
+            <h2 class="log-title">Đăng ký tài khoản</h2>
+            <form [formGroup]="formData">
+              <div class="form-group">
+                <input type="text" required="required" formControlName="username"/>
+                <label class="control-label" for="input">Họ và tên</label><i class="mtrl-select"></i>
+              </div>
+              <div class="form-group">
+                <input type="text" required="required" formControlName="password"/>
+                <label class="control-label" for="input">Tên đăng nhập</label><i class="mtrl-select"></i>
+              </div>
+              <div class="form-group">
+                <input type="password" required="required" formControlName="confirmPassword"/>
+                <label class="control-label" for="input">Mật khẩu</label><i class="mtrl-select"></i>
+              </div>
+              <div class="form-group">
+                <input type="password" required="required"/>
+                <label class="control-label" for="input">Xác nhận mật khẩu</label><i class="mtrl-select"></i>
+              </div>
+              <div class="form-radio">
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="radio" checked="checked"/><i class="check-box"></i>Nam
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="radio"/><i class="check-box"></i>Nữ
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" required="required"/>
+                <label class="control-label" for="input"><a href="https://wpkixx.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6c29010d05002c">[email&#160;protected]</a></label><i class="mtrl-select"></i>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" checked="checked"/><i class="check-box"></i>
+                  Chấp nhận Điều khoản & Điều kiện?
+                </label>
+              </div>
+              <a  title="" class="already-have" (click)="showForm(true)">Tôi đã có tài khoản?</a>
+              <div class="submit-btns">
+                <button class="mtr-btn signup" type="button" (click)="register()"><span>Đăng ký</span></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

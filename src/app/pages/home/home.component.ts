@@ -9,7 +9,9 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit{
-  formData: FormGroup
+  formData: FormGroup;
+  page: string;
+  isDetail: boolean = false;
   constructor(private authenticationService: AuthService,
               private router: Router,
               private readonly fb: FormBuilder,) {
@@ -20,5 +22,13 @@ export class HomeComponent implements OnInit{
   }
 
   ngOnInit() {
+  }
+
+  goPage(content: string, event?: any) {
+    if (event) {
+      event.preventDefault();
+    }
+    this.isDetail = true;
+    this.page= content;
   }
 }

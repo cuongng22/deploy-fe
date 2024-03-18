@@ -18,8 +18,8 @@ export class AuthService {
     this.currentUser = this.currentUserSubject.asObservable();
   }
 
-  login(username: string, password: string) {
-    return this.http.post<any>(`${API_URL}/login`, {username, password})
+  login(body) {
+    return this.http.post<any>(`${API_URL}/login`, body)
       .pipe(map(user => {
         localStorage.setItem('user', JSON.stringify(user));
         this.currentUserSubject.next(user);

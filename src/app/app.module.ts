@@ -7,19 +7,19 @@ import {LoginComponent} from "./pages/login/login.component";
 import {JwtInterceptor} from "./helper/jwt-interceptor";
 import {ErrorInterceptor} from "./helper/error-interceptor";
 import {AppRoutingModule} from "./app-routing.module";
-import {HomeComponent} from "./pages/home/home.component";
+import {HomeModule} from "./pages/home/home.module";
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HomeModule
   ],
   providers: [
     {

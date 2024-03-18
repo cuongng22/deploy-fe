@@ -4,16 +4,14 @@
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="land-featurearea">
           <div class="land-meta">
-            <h1>Fake book cuongbip</h1>
+            <h1>CƯỜNG NGUYỄN VÀ NHỮNG NGƯỜI BẠN</h1>
             <p>
-              Không nghe cave kể chuyện <br>
-              Không nghe nghiện trình bày <br>
-              Tham gia Fake book cuongbip để trải lòng nhiều hơn
+              Tham gia cộng đồng của e Cường để trải lòng nhiều hơn
             </p>
             <div class="friend-logo">
-              <span><img src="/assets/images/wink.png" alt=""></span>
+              <span><img src="/assets/images/background.jpg" style="width: 50%" alt=""></span>
             </div>
-            <a href="#" title="" class="folow-me">TALENT WITHOUT HARD WORKING IS NOTHING!</a>
+            <h1>TALENT WITHOUT HARD WORKING IS NOTHING!</h1>
           </div>
         </div>
       </div>
@@ -46,7 +44,7 @@
             <h2 class="log-title">Đăng ký tài khoản</h2>
             <form [formGroup]="formData">
               <div class="form-group">
-                <input type="text" required="required" />
+                <input type="text" required="required" formControlName="name" />
                 <label class="control-label" for="input">Họ và tên</label><i class="mtrl-select"></i>
               </div>
               <div class="form-group">
@@ -60,21 +58,24 @@
               <div class="form-group">
                 <input type="password" required="required" formControlName="confirmPassword"/>
                 <label class="control-label" for="input">Xác nhận mật khẩu</label><i class="mtrl-select"></i>
+                <div style="color: red" *ngIf="formData.hasError('passwordMismatch') && (formData.get('confirmPassword').dirty || formData.get('confirmPassword').touched)">
+                  Mật khẩu không khớp.
+                </div>
               </div>
               <div class="form-radio">
-                <div class="radio">
+                <div class="radio" >
                   <label>
-                    <input type="radio" name="radio" checked="checked"/><i class="check-box"></i>Nam
+                    <input value="00" type="radio" formControlName="gender" value="00" name="radio" checked="checked"/><i class="check-box"></i>Nam
                   </label>
                 </div>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="radio"/><i class="check-box"></i>Nữ
+                    <input value="01" type="radio" formControlName="gender" value="01" name="radio"/><i class="check-box"></i>Nữ
                   </label>
                 </div>
               </div>
               <div class="form-group">
-                <input type="text" required="required"/>
+                <input type="text" required="required" formControlName="email"/>
                 <label class="control-label" for="input"><a href="https://wpkixx.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6c29010d05002c">Email</a></label><i class="mtrl-select"></i>
               </div>
               <div class="checkbox">

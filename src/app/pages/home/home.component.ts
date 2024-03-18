@@ -31,4 +31,10 @@ export class HomeComponent implements OnInit{
     this.isDetail = true;
     this.page= content;
   }
+
+  logout(event: MouseEvent) {
+    event.preventDefault();
+    this.authenticationService.logout();
+    this.router.navigate(['/login']);
+  }
 }

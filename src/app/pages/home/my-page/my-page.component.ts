@@ -1,4 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {AuthService} from "../../../service/auth/auth.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-my-page',
@@ -7,10 +9,12 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class MyPageComponent implements OnInit {
   @Input() page : string
-  constructor() { }
+  constructor(
+    private authenticationService: AuthService,
+    private router  :Router
+  ) { }
 
   ngOnInit(): void {
-    console.log(this.page,11)
   }
 
   goPage(content: string, event: any) {
@@ -19,4 +23,10 @@ export class MyPageComponent implements OnInit {
     }
     this.page= content;
   }
+  logout(event: MouseEvent) {
+    event.preventDefault();
+    this.authenticationService.logout();
+    this.router.navigate(['/login']);
+  }
+
 }

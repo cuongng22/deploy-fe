@@ -21,9 +21,9 @@ export class AuthService {
   login(body) {
     return this.http.post<any>(`${API_URL}/login`, body)
       .pipe(map(user => {
-        localStorage.setItem('user', JSON.stringify(user));
-        this.currentUserSubject.next(user);
-        return user;
+        localStorage.setItem('user', JSON.stringify(user?.data));
+        this.currentUserSubject.next(user?.data);
+        return user?.data;
       }));
   }
   logout() {

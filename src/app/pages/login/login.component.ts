@@ -57,7 +57,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['home']);
         this.noti.success("Đăng nhập thành công!");
       }, error => {
-      this.noti.success("Đăng nhập thất bại, vui lòng kiểm tra lại thông tin.");
+      this.noti.error("Đăng nhập thất bại, vui lòng kiểm tra lại thông tin.");
       }
     );
   }

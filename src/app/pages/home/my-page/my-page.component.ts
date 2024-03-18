@@ -10,6 +10,13 @@ export class MyPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.page,11)
   }
 
+  goPage(content: string, event: any) {
+    if (event) {
+      event.preventDefault();
+    }
+    this.page= content;
+  }
 }
